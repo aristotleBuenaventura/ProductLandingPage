@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melofy</title>
+    <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
@@ -12,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container ">
             <div class="">
-                <img src="logo.png" class="pe-2 " alt="Melofy" style="height: 50px;">
+                <img src="logo.png" class="pe-2" id="logo" alt="Melofy">
                 <a class="navbar-brand" href="#"><strong>Melofy</strong></a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,13 +23,13 @@
             <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link text-light" href="#"><strong>Features</strong></a>
+                      <a class="nav-link text-light" href="#features"><strong>Features</strong></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link text-light" href="#"><strong>Pricing</strong></a>
+                      <a class="nav-link text-light" href="#pricing"><strong>Pricing</strong></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link text-light" href="#"><strong>Download</strong></a>
+                      <a class="nav-link text-light" href="#download"><strong>Download</strong></a>
                     </li>
                   </ul>
             </div>
@@ -36,104 +37,108 @@
     </nav>
 
     <!-- Promo -->
-    <div class="container-fluid " style="background-color: pink;">
+    <div class="container-fluid " id="promo" >
         <div class="container">
             <div class="row ">
                 <div class="col col-12 col-md-8 my-5">
-                    <h2>Get 3 months of Premium for free</h2>
-                    <h4 class="mt-4">Enjoy ad-free music listening, offline playback, and more. Cancel anytime.</h4>
-                    <a href="#"><button type="button" class=" mt-4  px-3 btn btn-outline-dark btn-lg" ><strong>View Plans</strong></button></a>
-                    <h5 class="mt-5" style="font-size: 12px;">Individual plan only. ₱129/month after. Terms and conditions apply. Open only to users who haven't already tried Premium. Offer ends 12 May 2022.</h5>
+                    <h2>Free Premium for three months</h2>
+                    <h4 class="mt-4">Enjoy music without ads, offline playback, and more. You can cancel at any moment.</h4>
+                    <a href="#pricing"><button type="button" class=" mt-4  px-3 btn btn-outline-dark btn-lg" ><strong>View Plans</strong></button></a>
+                    <h5 class="mt-5" id="info">Only for individuals. After that, 150/month. There are certain restrictions. Only users who have not yet tried Premium are eligible. Offer expires on May 12, 2022.</h5>
                 </div>
                 <div class="col col-12 col-md-4 text-center">
-                    <img src="banner.jpg" class="img-fluid mt-5 mb-5" alt="Melofy" style="height: 280px; width: 300px;">
+                    <img src="banner.jpg" class="img-fluid mt-5 mb-5" id="banner" alt="Banner">
                 </div>
             </div>
         </div>
     </div>
 
         <!-- Features -->
-    <div class="container-fluid" >
+    <div class="container-fluid" id="features">
         <div class="container mb-5">
             <div class="row ">
                 <div class="col col-12 text-center mt-5">
                     <h2><strong>Why go Premium?</strong></h2>
                 </div>
                 <div class="col col-12 col-md-3 text-center">
-                    <img src="download.png" class="img-fluid mt-5 mb-4" alt="Melofy" style="height: 120px; width: 120px;">
+                    <img src="download.png" onclick="downloadMessage()" class="img-fluid mt-5 mb-4 premium" alt="Download">
                     <h4>Download music.</h4>
-                    <h5 style="font-size: 15px;">Listen anywhere.</h5>
+                    <h5 class="message">Listen anywhere.</h5>
+                    <h5 class="message" id="download_message"></h5>
                 </div>
                 <div class="col col-12 col-md-3 text-center">
-                    <img src="no-ads.png" class="img-fluid mt-5 mb-4" alt="Melofy" style="height: 120px; width: 120px;">
+                    <img src="no-ads.png" onclick="noAddsMessage()" class="img-fluid mt-5 mb-4 premium" alt="No_Ads">
                     <h4>Ad-free music listening.</h4>
-                    <h5 style="font-size: 15px;">Enjoy nonstop music.</h5>
+                    <h5 class="message">Enjoy nonstop music.</h5>
+                    <h5 class="message" id="no-ads_message"></h5>
                 </div>
                 <div class="col col-12 col-md-3 text-center">
-                    <img src="play-button.png" class="img-fluid mt-5 mb-4" alt="Melofy" style="height: 120px; width: 120px;">
+                    <img src="play-button.png" onclick="playButtonMessage()" class="img-fluid mt-5 mb-4 premium" alt="Play_Button">
                     <h4>Play any song.</h4>
-                    <h5 style="font-size: 15px;">Even on mobile.</h5>
+                    <h5 class="message">Even on mobile.</h5>
+                    <h5 class="message" id="play-button_message"></h5>
                 </div>
                 <div class="col col-12 col-md-3 text-center">
-                    <img src="unlimited.png" class="img-fluid mt-5 mb-4" alt="Melofy" style="height: 120px; width: 120px;">
+                    <img src="unlimited.png" onclick="unlimitedMessage()" class="img-fluid mt-5 mb-4 premium" alt="Unlimited" >
                     <h4>Unlimited skips.</h4>
-                    <h5 style="font-size: 15px;">Just hit next.</h5>
+                    <h5 class="message">Just hit next.</h5>
+                    <h5 class="message" id="unlimited_message"></h5>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Pricing -->
-    <div class="container-fluid pb-5" style="background-color: lightgray;">
+    <div class="container-fluid pb-5" id="pricing">
         <div class="container ">
             <div class="row ">
                 <div class="col col-12 text-center mt-5">
                     <h2><strong>Pick your Premium</strong></h2>
-                    <h5 style="font-size: 15px;">Listen without limits on your phone, speaker, and other devices.</h5>
+                    <h5 class="message" >Listen without limits on your phone, speaker, and other devices.</h5>
                 </div>
                 <div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <div class="card-body">
                             <div class="border border-primary rounded p-2 text-primary d-inline-flex"><strong>One-time payment</strong></div>
-                            <h2 class="card-title mt-2" style="font-size: 30px;">Mini</h2>
-                            <h5 style="font-size: 15px;">From ₱7/day</h5>
-                            <h5 class="" style="font-size: 15px; margin-bottom: 95px;">1 account</h5>
-                            <hr class="style1 mb-4" style="border: 1px solid black;">
+                            <h2 class="card-title mt-2 price_title">Mini</h2>
+                            <h5 class="message">From ₱7/day</h5>
+                            <h5 id="account_mini">1 account</h5>
+                            <hr  class="style1 mb-4 line" >
                             <div class="row">
                                 <div class="col col-2">
-                                    <img src="check.png" class="img-fluid" alt="Melofy" >
+                                    <img src="check.png" class="img-fluid" alt="Check" >
                                 </div>
                                 <div class="col col-10">
                                     <h5>Ad-free music listening on mobile</h5>
                                 </div>
                                 <div class="col col-2">
-                                    <img src="check.png" class="img-fluid" alt="Melofy" >
+                                    <img src="check.png" class="img-fluid" alt="Check" >
                                 </div>
                                 <div class="col col-10">
                                     <h5>Group Session</h5>
                                 </div>
                                 <div class="col col-2">
-                                    <img src="check.png" class="img-fluid" alt="Melofy" >
+                                    <img src="check.png" class="img-fluid" alt="Check" >
                                 </div>
                                 <div class="col col-10">
                                     <h5>Download 30 songs on 1 mobile device</h5>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center mt-4 mb-3">
-                                <a href="#" class="btn btn-dark rounded btn-lg px-5" style="margin-top: 56px;">Get Started</a>
+                                <a href="#" id="mini_button" onclick="notAvailableYet()" class="btn btn-dark rounded btn-lg px-5">Get Started</a>
                             </div>
                         </div>
                       </div>
                 </div>
                 <div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" >
                         <div class="card-body">
-                            <div class="border rounded text-light p-2 d-inline-flex mb-1" style="background-color: #2E77D0;"><strong>3 months free</strong></div>
+                            <div class="border rounded text-light p-2 d-inline-flex mb-1 premium_promo"><strong>3 months free</strong></div>
                             <div class="border border-primary rounded p-2 text-primary d-inline-flex"><strong>One-time payment available</strong></div>
-                            <h2 class="card-title mt-2" style="font-size: 30px;">Individual</h2>
-                            <h5 style="font-size: 15px;">₱129/month after offer period</h5>
-                            <h5 class="mb-5" style="font-size: 15px;">1 account</h5>
-                            <hr class="style1 mb-4" style="border: 1px solid black;">
+                            <h2 class="card-title mt-2 price_title">Individual</h2>
+                            <h5 class="message">₱129/month after offer period</h5>
+                            <h5 class="mb-5 message">1 account</h5>
+                            <hr class="style1 mb-4 line">
                             <div class="row">
                                 <div class="col col-2">
                                     <img src="check.png" class="img-fluid"  >
@@ -161,73 +166,90 @@
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center mt-4 mb-3">
-                                <a href="#" class="btn btn-dark rounded btn-lg px-5">Get Started</a>
+                                <a href="#" onclick="notAvailableYet()"  class="btn btn-dark rounded btn-lg px-5">Get Started</a>
                             </div>
                         </div>
                       </div>
                 </div>
                 <div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <div class="card-body">
-                            <div class="border rounded text-light p-2" style="background-color: #2E77D0;"><strong>2 months for ₱185 with e-wallets and mobile</strong></div>
-                            <h2 class="card-title mt-2" style="font-size: 30px;">Duo</h2>
-                            <h5 style="font-size: 15px;">₱185/month after offer period</h5>
-                            <h5 class="" style="font-size: 15px; margin-bottom: 71px;">2 account</h5>
-                            <hr class="style1 mb-4" style="border: 1px solid black;">
+                            <div class="border rounded text-light p-2 premium_promo" ><strong>2 months for ₱185 with e-wallets and mobile</strong></div>
+                            <h2 class="card-title mt-2 price_title">Duo</h2>
+                            <h5 class="message">₱185/month after offer period</h5>
+                            <h5 id="account_duo">2 account</h5>
+                            <hr class="style1 mb-4 line">
                             <div class="row">
                                 <div class="col col-2">
-                                    <img src="check.png" class="img-fluid" alt="Melofy" >
+                                    <img src="check.png" class="img-fluid" alt="Check" >
                                 </div>
                                 <div class="col col-10">
                                     <h5>2 Premium accounts for a couple under one roof</h5>
                                 </div>
                                 <div class="col col-2">
-                                    <img src="check.png" class="img-fluid" alt="Melofy" >
+                                    <img src="check.png" class="img-fluid" alt="Check" >
                                 </div>
                                 <div class="col col-10">
                                     <h5>Ad-free music listening, play offline, on-demand playback</h5>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center mt-4 mb-3">
-                                <a href="#" class="btn btn-dark rounded btn-lg px-5" style="margin-top: 40px;">Get Started</a>
+                                <a href="#" onclick="notAvailableYet()"  class="btn btn-dark rounded btn-lg px-5" id="duo_button">Get Started</a>
                             </div>
                         </div>
                       </div>
                 </div>
                 <div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <div class="card-body">
-                            <div class="border rounded text-light p-2" style="background-color: #2E77D0;"><strong>2 months for ₱214 with e-wallets and mobile</strong></div>
-                            <h2 class="card-title mt-2" style="font-size: 30px;">Family</h2>
-                            <h5 style="font-size: 15px;">₱214/month after offer period</h5>
-                            <h5 class="" style="font-size: 15px; margin-bottom: 71px;">Up to 6 accounts</h5>
+                            <div class="border rounded text-light p-2 premium_promo"><strong>2 months for ₱214 with e-wallets and mobile</strong></div>
+                            <h2 class="card-title mt-2 price_title">Family</h2>
+                            <h5 class="message">₱214/month after offer period</h5>
+                            <h5 id="account_family">Up to 6 accounts</h5>
                             <hr class="style1 mb-4" style="border: 1px solid black;">
                             <div class="row">
                                 <div class="col col-2">
-                                    <img src="check.png" class="img-fluid" alt="Melofy" >
+                                    <img src="check.png" class="img-fluid" alt="Check" >
                                 </div>
                                 <div class="col col-10">
                                     <h5>6 Premium accounts for family members living under one roof</h5>
                                 </div>
                                 <div class="col col-2">
-                                    <img src="check.png" class="img-fluid" alt="Melofy" >
+                                    <img src="check.png" class="img-fluid" alt="Check" >
                                 </div>
                                 <div class="col col-10">
                                     <h5>Block explicit music</h5>
                                 </div>
                                 <div class="col col-2">
-                                    <img src="check.png" class="img-fluid" alt="Melofy" >
+                                    <img src="check.png" class="img-fluid" alt="Check" >
                                 </div>
                                 <div class="col col-10">
                                     <h5>Ad-free music listening, play offline, on-demand playback</h5>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center mt-4 mb-3">
-                                <a href="#" class="btn btn-dark rounded btn-lg px-5" style="margin-top: 8px;">Get Started</a>
+                                <a href="#" onclick="notAvailableYet()"  class="btn btn-dark rounded btn-lg px-5" id="family_button">Get Started</a>
                             </div>
                         </div>
                       </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- download -->
+    <div class="container-fluid" id="download">
+        <div class="container text-center">
+            <div class="border border-dark p-3 rounded m-5 d-inline-flex">
+                <div class="row">
+                    <div class="col  col-12 col-xl-6 d-flex align-items-center justify-content-center">
+                        Download the Melofy Now!
+                    </div>
+                    <div class="col col-12 col-xl-6 ">
+                        <a href="#" onclick="notAvailableYet()"  class="btn btn-dark rounded btn-lg px-5" id="download_button">Click Here!</a>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -237,7 +259,7 @@
         <div class="container ">
             <div class="row ">
                 <div class="col col-12 col-md-12 col-lg-3 col-xl-2 my-5">
-                    <img src="logo.png" class="pe-2 " alt="Melofy" style="height: 50px;">
+                    <img src="logo.png" class="pe-2 " alt="Logo" id="footer_logo">
                     <a class="navbar-brand text-dark" href="#"><strong>Melofy</strong></a>
                 </div>
                 <div class="col col-12 col-md-4 col-lg-3 col-xl-2 my-5">
@@ -295,13 +317,14 @@
                     </ul>
                 </div>
                 <div class="col col-12 col-lg-12 col-xl-4 my-5 text-center">
-                    <a href="#"><img src="facebook.png" class="img-fluid pe-3" alt="Melofy" style="height: 50px;" ></a>
-                    <a href="#"><img src="instagram.png" class="img-fluid pe-3" alt="Melofy" style="height: 50px;" ></a>
-                    <a href="#"><img src="twitter.png" class="img-fluid pe-3" alt="Melofy" style="height: 50px;" ></a>
+                    <a href="https://www.facebook.com/aristotlecortezbuenaventura/"><img src="facebook.png" class=" pe-3 social_media" alt="Facebook" ></a>
+                    <a href="#"><img src="instagram.png" class=" pe-3 social_media" alt="Instagram" ></a>
+                    <a href="#"><img src="twitter.png" class=" pe-3 social_media" alt="Twitter" ></a>
                 </div>
             </div>
         </div>
     </div>
+    <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>

@@ -1,0 +1,86 @@
+#logo {
+    height: 50px;
+}
+
+#promo {
+    background-color: pink;
+}
+
+#info {
+    font-size: 12px;
+}
+
+#banner {
+    height: 280px; width: 300px;
+}
+
+.premium {
+    height: 120px; 
+    width: 120px;
+    cursor: pointer;
+    
+}
+
+.message {
+    font-size: 15px;
+}
+
+#pricing {
+    background-color: lightgray;
+}
+
+.card {
+    width: 18rem;
+}
+
+.price_title {
+    font-size: 30px;
+}
+
+#account_mini {
+    font-size: 15px; 
+    margin-bottom: 95px;
+}
+
+.line {
+    border: 1px solid black;
+}
+
+#mini_button {
+    margin-top: 56px;
+}
+
+.premium_promo {
+    background-color: #2E77D0;
+}
+
+#account_duo {
+    font-size: 15px; 
+    margin-bottom: 71px;
+}
+
+#duo_button {
+    margin-top: 40px;
+}
+
+#account_family {
+    font-size: 15px; 
+    margin-bottom: 71px;
+}
+
+#family_button {
+    margin-top: 8px;
+}
+
+#footer_logo {
+    height: 50px;
+}
+
+.social_media {
+    height: 50px;
+}
+
+#download_button {
+    margin-top: 8px;
+    background-color: #2E77D0;
+}
