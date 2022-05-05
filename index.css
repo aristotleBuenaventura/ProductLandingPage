@@ -17,12 +17,21 @@
 .premium {
     height: 120px; 
     width: 120px;
-    cursor: pointer;
-    
+    cursor: pointer;  
+}
+
+.premium:hover {
+    transform: scale(1.2);
 }
 
 .message {
     font-size: 15px;
+}
+
+.message_more{
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 400px;
 }
 
 #pricing {
@@ -84,3 +93,4 @@
     margin-top: 8px;
     background-color: #2E77D0;
 }
+
